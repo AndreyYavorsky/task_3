@@ -1,7 +1,9 @@
-
 #include <stdio.h>
 
-int sum_squar(int** a , int num );
+extern "C"{
+	int sum_squar(int** a , int num );
+}
+
 
 int main(void)
 {	
