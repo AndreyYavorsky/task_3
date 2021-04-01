@@ -1,7 +1,7 @@
 
 #include <stdio.h>
 
-int sum_squar(int** a , int num );
+extern int sum_squar(int** a , int num );
 
 int main(void)
 {	
@@ -10,9 +10,9 @@ int main(void)
 
 	int num = 15;
 
-    printf("sum squares = %d\n", sum_squar(ptr, num));
+	printf("sum squares = %d\n", sum_squar(ptr, num));
 
-    return 0;
+	return 0;
 }
 
 

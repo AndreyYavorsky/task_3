@@ -4,9 +4,10 @@ section .text
 
 sum_squar:
     push ebp
+    mov ebp, esp
 
-    mov esi, [esp + 8]		; Взятие из стека адреса массива
-    mov ecx, [esp + 12]		; Взятие из стека кол-во элементов									
+    mov esi, [ebp + 8]		; Взятие из стека адреса массива
+    mov ecx, [ebp + 12]		; Взятие из стека кол-во элементов									
     xor edi, edi			; edi - хранится сумма 
 
 for:
@@ -18,5 +19,7 @@ for:
 
 end:
 	mov eax, edi
+
+	mov esp, ebp
     pop ebp
     ret
